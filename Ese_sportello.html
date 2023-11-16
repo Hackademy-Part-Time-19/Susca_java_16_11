@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        let contocorrente = 2500;
+        let operazione;
+        while (operazione != 3) {
+            operazione = parseInt(prompt("Benvenuto nella nostra banca.\n\n\ Premi 1 per fare un bonifico \n\n\ Premi 2 per fare un Prelievo \n\n\ Premi 3 per vedere il saldo \n\n\ Premi 4 per terminare la sessione "))
+
+          let importo;
+            switch (operazione) {
+
+                case 1:
+                importo = parseInt(prompt("Inserisci l'importo:"))
+                    if (contocorrente - importo >= 0) {
+                        let destinatario = parseInt(prompt("Inserisci l'Iban del destinatario:"))
+                        contocorrente = contocorrente - importo
+alert ( "Il bonifico è andato a buon fine")
+alert ("Il tuo saldo rimanente è di " + contocorrente + " euro")
+} else {
+                        alert("saldo insufficiente")
+                    }
+break;
+
+case 2:
+ importo = parseInt(prompt("Inserisci l'importo:"))
+                    if (contocorrente - importo >= 0) {
+                        contocorrente = contocorrente - importo;
+                        alert ("Il prelievo è andato a buon fine")
+                        alert ("Il tuo saldo rimanente è di " + contocorrente + " euro")
+
+                    } else {
+                        alert("saldo insufficiente")
+                    }
+                    break;
+                    
+                    case 3:
+                        alert ("il tuo saldo è di " + contocorrente + " euro")
+                        break;
+            case 4:
+                        alert ("Arrivederci è stato un piacere averti qui")
+                        break;
+                    }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>m
